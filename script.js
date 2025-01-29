@@ -12,7 +12,7 @@ const todoList = document.getElementById('todo-list');
 // Function to render todos
 function renderTodos() {
     todoList.innerHTML = ''; // Clear List
-    todos.forEach ((todo, idex) => {
+    todos.forEach ((todo, index) => {
         const li = document.createElement('li');
         li.className = 'todo-item';
         li.innerHTML = `
@@ -36,7 +36,7 @@ function addTodo(event) {
 
 // Function to edit a todo
 function editTodo(index) {
-    const updatedTodo = promt('Edit your todo:', todos[index]);
+    const updatedTodo = prompt('Edit your todo:', todos[index]);
     if (updatedTodo !== null) {
         todos[index] = updatedTodo.trim();
         renderTodos();
